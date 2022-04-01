@@ -10,7 +10,7 @@
 
 void test(void)
 {
-    std::cout << "hello" << std::endl; 
+    std::cout << "hello" << rd << std::endl; 
 }
 
 int main(void)
