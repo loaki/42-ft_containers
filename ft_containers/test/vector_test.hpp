@@ -7,7 +7,7 @@
 	#include <vector>
 	namespace ft = std;
 # else
-	#include "../inc/Vector.hpp"
+	#include "../inc/vector.hpp"
 # endif
 
 
@@ -59,7 +59,6 @@ void vector_test(void)
     std::cout << "begin = end : " << (vector_c.begin() == vector_c.end()) << std::endl;
     std::cout << "empty       : " << vector_c.empty() << std::endl;
     std::cout << "size        : " << vector_c.size() << std::endl;    std::cout << std::endl;
-    std::cout << std::endl;
 }
 
 #endif
