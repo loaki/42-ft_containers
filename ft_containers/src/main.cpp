@@ -6,6 +6,8 @@
 
 
 #include "../test/vector_test.hpp"
+#include "../test/stack_test.hpp"
+#include "../test/map_test.hpp"
 
 #ifdef STD
 	std::string rd = "std_out";
@@ -23,6 +25,8 @@ int main(void)
     std::cout.rdbuf(rdout.rdbuf());
 
     vector_test();
+    stack_test();
+    map_test();
 
 	rdout.close();
     std::cout.rdbuf(coutbuf);
