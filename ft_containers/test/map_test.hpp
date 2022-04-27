@@ -15,20 +15,28 @@ void map_test(void)
 	ft::pair<char, int> p1('a', 0);
 	ft::pair<char, int> p2('b', -1);
 	ft::pair<char, int> p3('c', 42);
+	ft::pair<char, int> p4('d', 90000);
+	ft::pair<char, int> p5('e', 69);
     ft::map<char, int>::iterator it;
 	map_a.insert(p1);
 	map_a.insert(p2);
 	map_a.insert(p3);
+	map_a.insert(p4);
+	map_a.insert(p5);
     it = map_a.begin();
-    std::cout << "map : ";
+    std::cout << "map              : ";
     while(it != map_a.end())
     {
         std::cout << (*it).first << " " << (*it).second << "|";
         it++;
     }
     std::cout << std::endl;
-    std::cout << "empty : " << map_a.empty() << std::endl;
-    std::cout << "find 'c' : " << (*(map_a.find('c'))).second << std::endl;
+    std::cout << "empty            : " << map_a.empty() << std::endl;
+    std::cout << "size             : " << map_a.size() << std::endl;
+    std::cout << "max_size         : " << map_a.max_size() << std::endl;
+    std::cout << "find('c')        : " << (*(map_a.find('c'))).second << std::endl;
+    std::cout << "upper_bound('b') : " << (*(map_a.upper_bound('b'))).first << std::endl;
+    std::cout << "lower_bound('b') : " << (*(map_a.lower_bound('b'))).first << std::endl;
 }
 
 #endif
