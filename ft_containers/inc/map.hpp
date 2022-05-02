@@ -136,8 +136,6 @@ namespace ft
 			~map()
 			{	
 				this->clear();
-				// node_allocator.destroy(new_node);
-				// node_allocator.deallocate(new_node, 1);
 				node_allocator.destroy(_end);
 				node_allocator.deallocate(_end, 1);
 				node_allocator.destroy(root);
@@ -169,8 +167,6 @@ namespace ft
 			reverse_iterator rbegin(void)
 			{
 				iterator it = end();
-			//	it--;
-				
 				return reverse_iterator(it); 
 				
 			}
@@ -178,7 +174,6 @@ namespace ft
 			const_reverse_iterator rbegin(void) const
 			{
 				const_iterator it = end();
-			//	it--;
 				return const_reverse_iterator(it); 
 			}
 
@@ -227,7 +222,7 @@ namespace ft
 				it = begin();
 
 				// ADD VALUE AT THE LEFT OF THE BINARY TREE
-				while (it != end() && _comp(it->first, val.first) == true) //si it.first < val.first
+				while (it != end() && _comp(it->first, val.first) == true)
 					it++;
 				if (it.ptr->is_init && (*it).first == val.first)
 				{

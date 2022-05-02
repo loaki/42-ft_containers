@@ -33,12 +33,15 @@ void vector_test(void)
     ft::vector<int> vector_b;
     ft::vector<std::string> vector_c;
     ft::vector<int>::iterator it;
+    ft::vector<int>::const_iterator cit;
     vector_a.assign(3,12);
     for(int i = 0; i < 10; i++)
         vector_a.push_back(i);
     it = vector_a.begin();
+    cit = vector_a.begin();
+    std::cout << "it = cit : " << (it == cit) << std::endl;
     it = vector_a.insert(it, 42);
-    vector_a.insert(it, 2, 9000);
+    vector_a.insert(it, 1000, 9000);
     vector_c.push_back("hello");
     vector_c.push_back("world");
     vector_a.pop_back();
