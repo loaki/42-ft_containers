@@ -4,7 +4,6 @@
 #include <string>
 #include <deque>
 
-
 #include "../test/vector_test.hpp"
 #include "../test/stack_test.hpp"
 #include "../test/map_test.hpp"
