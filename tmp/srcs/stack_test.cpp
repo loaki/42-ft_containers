@@ -4,12 +4,12 @@
 #ifndef STD
 #include "../includes/stack.hpp"
 #include "../includes/vector.hpp"
-#include <deque>
+//#include <deque>
 namespace opt=ft;
 #else
 #include <stack>
 #include <vector>
-#include <deque>
+//#include <deque>
 namespace opt=std;
 #endif
 

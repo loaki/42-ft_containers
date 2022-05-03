@@ -41,7 +41,7 @@ void vector_test(void)
     cit = vector_a.begin();
     std::cout << "it = cit : " << (it == cit) << std::endl;
     it = vector_a.insert(it, 42);
-    vector_a.insert(it, 1000, 9000);
+    vector_a.insert(it, 10000, 9000);
     vector_c.push_back("hello");
     vector_c.push_back("world");
     vector_a.pop_back();
