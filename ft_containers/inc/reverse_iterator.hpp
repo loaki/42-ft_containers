@@ -57,7 +57,6 @@ namespace ft
 		{
 			_Iter _tmp = _current; 
 			return std::__addressof(*--_tmp);
-			// return std::addressof(*--_tmp);
 		}
 
 		reverse_iterator operator++(int)

@@ -40,7 +40,6 @@ namespace	ft
 				return ;
 			}
 
-			/*Constructs a container with as many and the same elements as the range [first,last) */
 			template <class InputIterator>
 			vector(InputIterator first, InputIterator last, const allocator_type& alloc = allocator_type(), typename ft::enable_if<!ft::is_integral<InputIterator>::value, bool>::type = 0) :
 			 _allocator(alloc), _size(0), _capacity(0), _array(NULL)
@@ -64,7 +63,6 @@ namespace	ft
 
 			}
 
-			//Constructs a container with n elements. Each element is a copy of val IS SIZE N??
 			vector(size_type n, const value_type& val = value_type(), const allocator_type& alloc = allocator_type()): _allocator(alloc), _size(n), _capacity(n), _array(NULL)
 			{
 				if (n > 0)
@@ -76,7 +74,6 @@ namespace	ft
 			}
 		
 			/***** COPY *****/
-			//checker si size == 0 on peut allouer _array directement
 			vector(const vector& x) : _allocator(x._allocator), _size(x._size), _capacity(x._size), _array(NULL)
 			{
 				if (x._size > 0)
@@ -452,9 +449,9 @@ namespace	ft
 				ft::swap(_capacity, x._capacity);
 			}
 
-		/***** ATTRIBUTES ******/
+		/***** ATTRIBUTES *****/
 		
-		protected: 						// Because stack doesn't have access in private
+		protected:
 			
 			allocator_type  _allocator;
 			size_type		_size;
@@ -462,8 +459,7 @@ namespace	ft
 			pointer			_array;
 	};
 
-	/*NON MEMBER FUNCTIONS*/
-	/*relational operators*/
+	/***** OPERATORS *****/
 	template <class T, class Alloc>
   	bool operator== (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs)
 	{

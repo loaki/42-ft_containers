@@ -21,12 +21,15 @@ void map_test(void)
 	ft::pair<char, int> p3('c', 42);
 	ft::pair<char, int> p4('d', 90000);
 	ft::pair<char, int> p5('e', 69);
+	ft::pair<char, int> p6('e', 70);
     ft::map<char, int>::iterator it;
 	map_a.insert(p1);
 	map_a.insert(p2);
 	map_a.insert(p3);
 	map_a.insert(p4);
 	map_a.insert(p5);
+	map_a.insert(p6);
+    (*(map_a.find('c'))).second = 13;
     it = map_a.begin();
     std::cout << "map              : ";
     while(it != map_a.end())
