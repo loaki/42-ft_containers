@@ -8,6 +8,10 @@
 	#include "../inc/map.hpp"
 # endif
 
+#include <iostream>
+#include <stdlib.h>
+
+
 void map_test(void)
 {
     std::cout << "### map ###\n" << std::endl;
@@ -37,6 +41,18 @@ void map_test(void)
     std::cout << "find('c')        : " << (*(map_a.find('c'))).second << std::endl;
     std::cout << "upper_bound('b') : " << (*(map_a.upper_bound('b'))).first << std::endl;
     std::cout << "lower_bound('b') : " << (*(map_a.lower_bound('b'))).first << std::endl;
+    srand(2);
+    for (int i = 0; i < 1000; i++)
+    {
+        map_a.insert(ft::make_pair(rand(), rand()));
+    }
+    it = map_a.begin();
+    std::cout << "map              : ";
+    while(it != map_a.end())
+    {
+        std::cout << (*it).first << " " << (*it).second << "|";
+        it++;
+    }
 }
 
 #endif
